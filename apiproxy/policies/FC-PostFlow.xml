@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FlowCallout async="false" continueOnError="false" enabled="true" name="FC-PostFlow">
+    <DisplayName>FC - PostFlow</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <SharedFlowBundle>6762-corspostflow-rev1-2018-04-13-1</SharedFlowBundle>
+</FlowCallout>

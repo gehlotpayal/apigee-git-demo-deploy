@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FlowCallout async="false" continueOnError="false" enabled="true" name="FC-PreFlow">
+    <DisplayName>FC - PreFlow</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <SharedFlowBundle>corspreflow-rev1-2018-04-13-1</SharedFlowBundle>
+</FlowCallout>

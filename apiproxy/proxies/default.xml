@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    <FaultRules/>
+    <PreFlow name="PreFlow">
+        <Request/>
+        <Response/>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <Flows>
+        <Flow name="post /numbertowords">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>FC-PreFlow</Name>
+                </Step>
+                <Step>
+                    <Name>verify-oauth-v2-access-token</Name>
+                </Step>
+                <Step>
+                    <Name>JSON-Threat-Protection-2</Name>
+                </Step>
+                <Step>
+                    <Name>Regular-Expression-Protection-2</Name>
+                </Step>
+                <Step>
+                    <Name>Quota-1</Name>
+                </Step>
+                <Step>
+                    <Name>nw-request-payload</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>nw-response-payload</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/numbertowords") and (request.verb = "POST")</Condition>
+        </Flow>
+        <Flow name="post /numbertodollars">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>FC-PreFlow</Name>
+                </Step>
+                <Step>
+                    <Name>verify-oauth-v2-access-token</Name>
+                </Step>
+                <Step>
+                    <Name>JSON-Threat-Protection-1</Name>
+                </Step>
+                <Step>
+                    <Name>Regular-Expression-Protection-1</Name>
+                </Step>
+                <Step>
+                    <Name>Quota-1</Name>
+                </Step>
+                <Step>
+                    <Name>nd-request-payload</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>nd-response-payload</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/numbertodollars") and (request.verb = "POST")</Condition>
+        </Flow>
+    </Flows>
+    <HTTPProxyConnection>
+        <BasePath>/v2/number-to-word-conversion</BasePath>
+        <Properties/>
+        <VirtualHost>default</VirtualHost>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="default">
+        <TargetEndpoint>default</TargetEndpoint>
+    </RouteRule>
+</ProxyEndpoint>

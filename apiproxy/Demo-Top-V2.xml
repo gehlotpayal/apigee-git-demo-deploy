@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="Demo-Top-V2">
+    <Basepaths>/number-to-word-conversion</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1529920712394</CreatedAt>
+    <CreatedBy>nikhil.purohit@neosalpha.com</CreatedBy>
+    <Description>A brief description of the API.
+It can be multiple lines.
+</Description>
+    <DisplayName>Number-to-word-Conversion</DisplayName>
+    <LastModifiedAt>1530266156287</LastModifiedAt>
+    <LastModifiedBy>nikhil.purohit@neosalpha.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:d7d2a62265620f810619464a2d84cec70d464ca30fa372d36f0c2cdbf8062f9cc64ec89179eed2e1865e4697be212f2a0d9d0d4462d1c492488bbd22e194ef33</ManifestVersion>
+    <Policies>
+        <Policy>FC-PostFlow</Policy>
+        <Policy>FC-PreFlow</Policy>
+        <Policy>JSON-Threat-Protection-1</Policy>
+        <Policy>JSON-Threat-Protection-2</Policy>
+        <Policy>Quota-1</Policy>
+        <Policy>Regular-Expression-Protection-1</Policy>
+        <Policy>Regular-Expression-Protection-2</Policy>
+        <Policy>Verify-API-Key-1</Policy>
+        <Policy>nd-request-payload</Policy>
+        <Policy>nd-response-payload</Policy>
+        <Policy>nw-request-payload</Policy>
+        <Policy>nw-response-payload</Policy>
+        <Policy>verify-oauth-v2-access-token</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>openapi://association.json</Resource>
+        <Resource>jsc://nd-request-payload.js</Resource>
+        <Resource>jsc://nd-response-payload.js</Resource>
+        <Resource>jsc://nw-request-payload.js</Resource>
+        <Resource>jsc://nw-response-payload.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

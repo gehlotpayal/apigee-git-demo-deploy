@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript async="false" continueOnError="false" enabled="true" timeLimit="200" name="nw-request-payload">
+    <DisplayName>nw-request-payload</DisplayName>
+    <Properties/>
+    <ResourceURL>jsc://nw-request-payload.js</ResourceURL>
+</Javascript>
